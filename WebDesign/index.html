@@ -36,7 +36,7 @@
                 <div class="sectionOne__left--label label text-white">welcome</div>
                 <div class="sectionOne__left--title common-title text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 <div class="sectionOne__left--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reiciendis iure, itaque qui exercitationem possimus excepturi placeat praesentium ea sapiente! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas officiis minus perferendis, nesciunt quidem tempore?</div>
-                <button class="sectionOne__left--btn white-btn">Explore</button>
+                <button class="sectionOne__left--btn white-btn" id="about">Explore</button>
             </div>
             <img src="src/images/Home/Chef-bro.svg" alt="" class="sectionOne__right responsive-image">
         </div>
@@ -98,7 +98,7 @@
         <div class="sectionThree__right flex">
             <div class="sectionThree__right--title common-title">Salty Recipes</div>
             <div class="sectionThree__right--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum impedit, assumenda magni in exercitationem magnam consectetur temporibus facilis minus perferendis labore mollitia ad modi quaerat. Maiores eos, laborum excepturi laudantium nisi numquam totam aspernatur asperiores.</div>
-            <button class="sectionThree__right--btn dark-btn">Explore</button>
+            <button onclick="explorePopUp ()" class="sectionThree__right--btn dark-btn">Explore</button>
         </div>
     </div>
 
@@ -190,18 +190,17 @@
         </div>
     </div>
 
-    <div class="pop-up-container" id="search-pop-up">
+    <div class="pop-up-container" id="popUpId">
         <div class="pop-up">
+            <button class="close common-title" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
+                <div class="logo__text logo__text">Recipy</div>
+            </div>
             <div class="label text-green">Looking for a specific recipe?</div>
             <form>
                 <input type="text" class="srch-bar input common-title" placeholder="Search...">
             </form>
-            <div class="pop-up-images pop-up-container">
-                <img src="src/images/SaltyRecipes/cala-soup.jpg" alt="" class="responsive-image">
-                <img src="src/images/SaltyRecipes/deryn-macey-burger.jpg" alt="" class="responsive-image">
-                <img src="src/images/SaltyRecipes/fernanda-martinez-h-fries.jpg" alt="" class="responsive-image">
-                <img src="src/images/SaltyRecipes/mariana-medvedeva-dish.jpg" alt="" class="responsive-image">
-            </div>
         </div>
     </div>
 

@@ -55,3 +55,13 @@ window.onscroll = function () {
         nav.classList.remove ("sticky");
     }
 }
+
+function explorePopUp () {
+    const popUp = document.getElementById ("popUpId");
+    popUp.classList.add ("show");
+    popUp.addEventListener ("click", (e) => {
+        if (e.target.id == "popUpId" || e.target.id == "cbtn") {
+            popUp.classList.remove ("show");
+        }
+    });
+}
