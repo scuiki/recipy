@@ -468,3 +468,24 @@
 .show {
     display: flex;
 }
+
+.about-text {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+    font-family: var(--font2);
+    font-size: 18px;
+    color: var(--color-green-100);
+}
+
+.common-title-about {
+    text-transform: capitalize;
+    font-size: 44px;
+    font-family: var(--font1);
+    font-weight: bold;
+}
+
+#socials {
+    cursor: pointer;
+}

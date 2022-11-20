@@ -36,7 +36,7 @@
                 <div class="sectionOne__left--label label text-white">welcome</div>
                 <div class="sectionOne__left--title common-title text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 <div class="sectionOne__left--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reiciendis iure, itaque qui exercitationem possimus excepturi placeat praesentium ea sapiente! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas officiis minus perferendis, nesciunt quidem tempore?</div>
-                <button class="sectionOne__left--btn white-btn" id="about">Explore</button>
+                <button onclick="explorePopUpAbout ()" class="sectionOne__left--btn white-btn" id="about">Explore</button>
             </div>
             <img src="src/images/Home/Chef-bro.svg" alt="" class="sectionOne__right responsive-image">
         </div>
@@ -50,12 +50,11 @@
         </div>
         <div class="sectionTwo__logo ">
             <img src="src/images/Companies/Google.svg" alt="" class="responsive-image">
-            <img src="src/images/Companies/Microsoft.svg" alt="" class="responsive-image">
-            <img src="src/images/Companies/Airbnb.svg" alt="" class="responsive-image">
-            <img src="src/images/Companies/Facebook.svg" alt="" class="responsive-image">
-            <img src="src/images/Companies/Spotify.svg" alt="" class="responsive-image">
+            <img src="src/images/Companies/Microsoft.svg" alt="" class="responsive-image" id="microsoft">
+            <img src="src/images/Companies/Facebook.svg" alt="" class="responsive-image" id="facebook">
+            <img src="src/images/Companies/ifood-43.svg" width="120px" alt="" class="responsive-image" id="ifood">
         </div>
-        <button class="sectionTwo__btn dark-btn">Learn more</button>
+        <button onclick="explorePopUpPartners ()" class="sectionTwo__btn dark-btn">Learn more</button>
     </div>
      
     <div class="sectionThree container grid" id="sThree">
@@ -106,7 +105,7 @@
         <div class="sectionFour__left flex">
             <div class="sectionFour__left--title common-title">Sweety Recipes</div>
             <div class="sectionFour__left--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia porro rerum quidem facere, numquam laborum, impedit, recusandae dolorum doloremque non incidunt nam commodi reiciendis delectus enim? Nobis a cum labore! Blanditiis hic non quis iusto.</div>
-            <button class="sectionFour__left--btn dark-btn">Explore</button>
+            <button onclick="explorePopUp ()" class="sectionFour__left--btn dark-btn">Explore</button>
         </div>
                 <!--Slider-->
                 <div class="slider">
@@ -174,12 +173,12 @@
                 <div class="pos">chef</div>
             </div>
         </div>
-        <button class="sectionFive__btn dark-btn">View team</button>
+        <button onclick="explorePopUpTeams ()" class="sectionFive__btn dark-btn">View team</button>
     </div>
 
     <div class="footerWrapper">
         <div class="footerLinks container">
-            <div class="footerLinks__socials">
+            <div class="footerLinks__socials" id="socials">
                 <img src="src/images/socials/facebook.svg" alt="">
                 <img src="src/images/socials/instagram.svg" alt="">
                 <img src="src/images/socials/twitter.svg" alt="">
@@ -201,6 +200,42 @@
             <form>
                 <input type="text" class="srch-bar input common-title" placeholder="Search...">
             </form>
+        </div>
+    </div>
+
+    <div class="pop-up-container" id="popUpIdAbout">
+        <div class="pop-up">
+            <button class="close common-title" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
+                <div class="logo__text logo__text">Recipy</div>
+            </div>
+            <div class="common-title-about text-center text-dark">About</div>
+            <div class="about-text text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate dolor, a hic et nostrum dignissimos velit dolore. Placeat atque voluptates sint magni reprehenderit! Deserunt quam dolorem qui sequi eos ut, corporis, perspiciatis eligendi laudantium quidem atque? Beatae quasi hic tempora aliquid eos voluptatibus, corporis alias debitis deserunt autem non harum laboriosam voluptatum! Doloribus nam voluptatem, repellat numquam ipsum veritatis aperiam, quia est repudiandae culpa alias architecto? Libero optio labore pariatur cum! Perferendis at reprehenderit atque obcaecati optio cupiditate voluptatem!</div>
+        </div>
+    </div>
+
+    <div class="pop-up-container" id="popUpIdPartners">
+        <div class="pop-up">
+            <button class="close common-title" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
+                <div class="logo__text logo__text">Recipy</div>
+            </div>
+            <div class="common-title-about text-center text-dark">Partners</div>
+            <div class="about-text text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate dolor, a hic et nostrum dignissimos velit dolore. Placeat atque voluptates sint magni reprehenderit! Deserunt quam dolorem qui sequi eos ut, corporis, perspiciatis eligendi laudantium quidem atque? Beatae quasi hic tempora aliquid eos voluptatibus, corporis alias debitis deserunt autem non harum laboriosam voluptatum! Doloribus nam voluptatem, repellat numquam ipsum veritatis aperiam, quia est repudiandae culpa alias architecto? Libero optio labore pariatur cum! Perferendis at reprehenderit atque obcaecati optio cupiditate voluptatem!</div>
+        </div>
+    </div>  
+    
+    <div class="pop-up-container" id="popUpIdTeams">
+        <div class="pop-up">
+            <button class="close common-title" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
+                <div class="logo__text logo__text">Recipy</div>
+            </div>
+            <div class="common-title-about text-center text-dark">Team</div>
+            <div class="about-text text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate dolor, a hic et nostrum dignissimos velit dolore. Placeat atque voluptates sint magni reprehenderit! Deserunt quam dolorem qui sequi eos ut, corporis, perspiciatis eligendi laudantium quidem atque? Beatae quasi hic tempora aliquid eos voluptatibus, corporis alias debitis deserunt autem non harum laboriosam voluptatum! Doloribus nam voluptatem, repellat numquam ipsum veritatis aperiam, quia est repudiandae culpa alias architecto? Libero optio labore pariatur cum! Perferendis at reprehenderit atque obcaecati optio cupiditate voluptatem!</div>
         </div>
     </div>
 

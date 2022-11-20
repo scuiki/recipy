@@ -30,8 +30,21 @@ html {
 }
 
 .sectionTwo__logo img {
+    margin-left: 220px;
     justify-self: center;
     align-self: center;
+}
+
+#microsoft {
+    margin-left: 250px;
+}
+
+#facebook {
+    margin-left: 270px;
+}
+
+#ifood {
+    margin-top: 30px;
 }
 
 .sectionTwo__btn {

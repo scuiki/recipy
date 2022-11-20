@@ -65,3 +65,33 @@ function explorePopUp () {
         }
     });
 }
+
+function explorePopUpAbout () {
+    const popUp = document.getElementById ("popUpIdAbout");
+    popUp.classList.add ("show");
+    popUp.addEventListener ("click", (e) => {
+        if (e.target.id == "popUpIdAbout" || e.target.id == "cbtn") {
+            popUp.classList.remove ("show");
+        }
+    });
+}
+
+function explorePopUpPartners () {
+    const popUp = document.getElementById ("popUpIdPartners");
+    popUp.classList.add ("show");
+    popUp.addEventListener ("click", (e) => {
+        if (e.target.id == "popUpIdPartners" || e.target.id == "cbtn") {
+            popUp.classList.remove ("show");
+        }
+    });
+}
+
+function explorePopUpTeams () {
+    const popUp = document.getElementById ("popUpIdTeams");
+    popUp.classList.add ("show");
+    popUp.addEventListener ("click", (e) => {
+        if (e.target.id == "popUpIdTeams" || e.target.id == "cbtn") {
+            popUp.classList.remove ("show");
+        }
+    });
+}
