@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/images/Logo/LogoWhite.svg">
+    <title>Recipy</title>
+    <link rel="stylesheet" href="src/styles/designSystem.css">
+    <link rel="stylesheet" href="src/styles/index.css">
+</head>
+
+<body>
+    <div class="logo" id="sOne">
+        <img src="src/images/Logo/Hamburger-pana.svg" width="120px" alt="" class="navbar__logo--image">
+        <div class="logo__text logo__text">Recipy</div>
+    </div>
+
+    <div class="hero">
+        <div class="navbar" id="nav">
+            <div class="navbar__menu hidden" id="menu">
+                <a href="#sOne" class="navbar__menu--1">Home</a>
+                <a href="#sThree" class="navbar__menu--2">Salty</a>
+                <a href="#sFour" class="navbar__menu--3">Sweet</a>
+                <a href="mailto: recipy@example.com" class="navbar__menu--4">Contact</a>
+            </div>
+
+            <div class="navbar__icons">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-x-lg hide"></i>
+            </div>
+        </div>
+
+        <div class="sectionOne grid container">
+            <div class="sectionOne__left flex">
+                <div class="sectionOne__left--label label text-white">welcome</div>
+                <div class="sectionOne__left--title common-title text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="sectionOne__left--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reiciendis iure, itaque qui exercitationem possimus excepturi placeat praesentium ea sapiente! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas officiis minus perferendis, nesciunt quidem tempore?</div>
+                <button class="sectionOne__left--btn white-btn">Explore</button>
+            </div>
+            <img src="src/images/Home/Chef-bro.svg" alt="" class="sectionOne__right responsive-image">
+        </div>
+    </div>
+
+    <div class="sectionTwo container">
+        <div class="sectionTwo__content text-center flex">
+            <div class="sectionTwo__content--label label text-green">partners</div>
+            <div class="sectionTwo__content--title common-title">Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="sectionTwo__content--text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+        </div>
+        <div class="sectionTwo__logo ">
+            <img src="src/images/Companies/Google.svg" alt="" class="responsive-image">
+            <img src="src/images/Companies/Microsoft.svg" alt="" class="responsive-image">
+            <img src="src/images/Companies/Airbnb.svg" alt="" class="responsive-image">
+            <img src="src/images/Companies/Facebook.svg" alt="" class="responsive-image">
+            <img src="src/images/Companies/Spotify.svg" alt="" class="responsive-image">
+        </div>
+        <button class="sectionTwo__btn dark-btn">Learn more</button>
+    </div>
+     
+    <div class="sectionThree container grid" id="sThree">
+        <!--Slider-->
+        <div class="slider">
+            <!--RadioButtons-->
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <!--Images-->
+                <div class="slide first">
+                    <img src="src/images/SaltyRecipes/cala-soup.jpg" alt="img1" class="sectionThree__left responsive-image">
+                </div>
+                <div class="slide second">
+                    <img src="src/images/SaltyRecipes/deryn-macey-burger.jpg" alt="img2" class="sectionThree__left responsive-image">
+                </div>
+                <div class="slide third">
+                    <img src="src/images/SaltyRecipes/fernanda-martinez-h-fries.jpg" alt="img3" class="sectionThree__left responsive-image">
+                </div>
+
+                <!--NavigationAuto-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+            <!--SlidesEnd-->
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+        </div>
+        <!--SliderEnd-->
+        <div class="sectionThree__right flex">
+            <div class="sectionThree__right--title common-title">Salty Recipes</div>
+            <div class="sectionThree__right--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum impedit, assumenda magni in exercitationem magnam consectetur temporibus facilis minus perferendis labore mollitia ad modi quaerat. Maiores eos, laborum excepturi laudantium nisi numquam totam aspernatur asperiores.</div>
+            <button class="sectionThree__right--btn dark-btn">Explore</button>
+        </div>
+    </div>
+
+    <div class="sectionFour container grid" id="sFour">
+        <div class="sectionFour__left flex">
+            <div class="sectionFour__left--title common-title">Sweety Recipes</div>
+            <div class="sectionFour__left--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia porro rerum quidem facere, numquam laborum, impedit, recusandae dolorum doloremque non incidunt nam commodi reiciendis delectus enim? Nobis a cum labore! Blanditiis hic non quis iusto.</div>
+            <button class="sectionFour__left--btn dark-btn">Explore</button>
+        </div>
+                <!--Slider-->
+                <div class="slider">
+                    <!--RadioButtons-->
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
+                        <input type="radio" name="radio-btn" id="radio6">
+        
+                        <!--Images-->
+                        <div class="slide first">
+                            <img src="src/images/SweetRecipes/micheile-dot-com-pancakes.jpg" alt="img4" class="sectionFour__right responsive-image">
+                        </div>
+                        <div class="slide second">
+                            <img src="src/images/SweetRecipes/no-revisions-cookies.jpg" alt="img5" class="sectionFour__right responsive-image">
+                        </div>
+                        <div class="slide third">
+                            <img src="src/images/SweetRecipes/taylor-kiser-cups.jpg" alt="img6" class="sectionFour__right responsive-image">
+                        </div>
+        
+                        <!--NavigationAuto-->
+                        <div class="navigation-auto">
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                            <div class="auto-btn6"></div>
+                        </div>
+                    </div>
+                    <!--SlidesEnd-->
+        
+                    <div class="manual-navigation">
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                        <label for="radio6" class="manual-btn"></label>
+                    </div>
+        
+                </div>
+                <!--SliderEnd-->
+    </div>
+
+    <div class="sectionFive container">
+        <div class="sectionFive__content text-center">
+            <div class="sectionFive__content--label label text-green">chefs</div>
+            <div class="sectionFive__content--title common-title">our team</div>
+            <div class="sectionFive__content--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, possimus.</div>
+        </div>
+        <div class="sectionFive__cards">
+            <div class="sectionFive__cards--1">
+                <img src="src/images/team/Cardtest.svg" alt="" class="responsive-image">
+                <div class="name">Erick Viana</div>
+                <div class="pos">chef</div>
+            </div>
+            <div class="sectionFive__cards--2">
+                <img src="src/images/team/Cardtest.svg" alt="" class="responsive-image">
+                <div class="name">Laryssa Marquesin</div>
+                <div class="pos">chef</div>
+            </div>
+            <div class="sectionFive__cards--3">
+                <img src="src/images/team/Cardtest.svg" alt="" class="responsive-image">
+                <div class="name">Leonardo Kuntz</div>
+                <div class="pos">chef</div>
+            </div>
+            <div class="sectionFive__cards--4">
+                <img src="src/images/team/Cardtest.svg" alt="" class="responsive-image">
+                <div class="name">Tiago Machado</div>
+                <div class="pos">chef</div>
+            </div>
+        </div>
+        <button class="sectionFive__btn dark-btn">View team</button>
+    </div>
+
+    <div class="footerWrapper">
+        <div class="footerLinks container">
+            <div class="footerLinks__socials">
+                <img src="src/images/socials/facebook.svg" alt="">
+                <img src="src/images/socials/instagram.svg" alt="">
+                <img src="src/images/socials/twitter.svg" alt="">
+                <img src="src/images/socials/tiktok.svg" alt="">
+                <img src="src/images/socials/youtube.svg" alt="">
+            </div>
+            <div class="footerLinks__copyright text-white text-center">Ⓒ Recipy, 2022. All rights reserved.</div>
+        </div>
+    </div>
+
+    <div class="pop-up-container" id="search-pop-up">
+        <div class="pop-up">
+            <div class="label text-green">Looking for a specific recipe?</div>
+            <form>
+                <input type="text" class="srch-bar input common-title" placeholder="Search...">
+            </form>
+            <div class="pop-up-images pop-up-container">
+                <img src="src/images/SaltyRecipes/cala-soup.jpg" alt="" class="responsive-image">
+                <img src="src/images/SaltyRecipes/deryn-macey-burger.jpg" alt="" class="responsive-image">
+                <img src="src/images/SaltyRecipes/fernanda-martinez-h-fries.jpg" alt="" class="responsive-image">
+                <img src="src/images/SaltyRecipes/mariana-medvedeva-dish.jpg" alt="" class="responsive-image">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+    <script src="src/main.js"></script>
+</html>
