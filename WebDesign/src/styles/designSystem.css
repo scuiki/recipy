@@ -46,6 +46,7 @@
 }
 
 .white-btn, .dark-btn {
+    z-index: 2;
     color: var(--color-dark-100);
     background-color: var(--color-white-100);
     cursor: pointer;
@@ -221,8 +222,7 @@
         max-width: 500px;
     }
 
-    .navbar__menu {
-        z-index: 1;    
+    .navbar__menu {   
         background-color: var(--color-green-100);
         position: absolute;
         top: 7vh;
@@ -250,8 +250,7 @@
     }
 
     .hidden {
-        z-index: -1;
-        opacity: 0%;
+        display: none;
     }
 
     .footerLinks {
@@ -389,7 +388,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index:2;
+    z-index:10;
 }
 
 .top {
@@ -421,6 +420,38 @@
     border: 3px solid var(--color-green-25);
     border-radius: 10px;
     position: relative;
+}
+
+.pop-up-submit {
+    z-index: 15;
+    background: var(--color-white-100);
+    width: 17.5%;
+    height: 47%;
+    border: 3px solid var(--color-green-25);
+    border-radius: 10px;
+    position: relative;
+}
+
+.pop-up-signup {
+    z-index: 15;
+    background: var(--color-white-100);
+    width: 13%;
+    height: 31%;
+    border: 3px solid var(--color-green-25);
+    border-radius: 10px;
+    position: relative;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.mid-button-text {
+    padding-top: 2%;
+    font-family: var(--font2);
+    font-size: var(--sub);
+    margin: 1%;
 }
 
 @keyframes pop-up {
@@ -479,6 +510,21 @@
     color: var(--color-green-100);
 }
 
+::placeholder {
+    color: var(--color-dark-50);
+    font-family: var(--font2);
+    font-size: var(--body);
+    padding-left: 1%;
+  }
+
+ .select {
+    color: var(--color-dark-50);
+    font-family: var(--font2);
+    font-size: var(--body);
+    padding-left: 1%;
+    margin-bottom: 15%;
+ } 
+
 .common-title-about {
     text-transform: capitalize;
     font-size: 44px;
@@ -489,3 +535,40 @@
 #socials {
     cursor: pointer;
 }
+
+.increase {
+    font-size: var(--h2);
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+.hvr-bounce-in {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }
+  .hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }

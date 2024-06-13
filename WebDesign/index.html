@@ -12,17 +12,18 @@
 
 <body>
     <div class="logo" id="sOne">
-        <img src="src/images/Logo/Hamburger-pana.svg" width="120px" alt="" class="navbar__logo--image">
-        <div class="logo__text logo__text">Recipy</div>
+        <img src="src/images/Logo/Hamburger-pana.svg" width="120px" alt="" class="navbar__logo--image hvr-grow">
+        <div class="logo__text logo__text hvr-grow">Recipy</div>
     </div>
 
     <div class="hero">
         <div class="navbar" id="nav">
             <div class="navbar__menu hidden" id="menu">
-                <a href="#sOne" class="navbar__menu--1">Home</a>
-                <a href="#sThree" class="navbar__menu--2">Salty</a>
-                <a href="#sFour" class="navbar__menu--3">Sweet</a>
-                <a href="mailto: recipy@example.com" class="navbar__menu--4">Contact</a>
+                <a href="#sOne" class="navbar__menu--1 hvr-grow">Home</a>
+                <a href="#sThree" class="navbar__menu--2 hvr-grow">Salty</a>
+                <a href="#sFour" class="navbar__menu--3 hvr-grow">Sweet</a>
+                <a href="#" onclick="explorePopUpSignup()" class="navbar__menu--3 hvr-grow">Sign Up</a>
+                <a href="mailto: recipy@example.com" class="navbar__menu--4 hvr-grow">Contact</a>
             </div>
 
             <div class="navbar__icons">
@@ -36,7 +37,7 @@
                 <div class="sectionOne__left--label label text-white">welcome</div>
                 <div class="sectionOne__left--title common-title text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 <div class="sectionOne__left--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reiciendis iure, itaque qui exercitationem possimus excepturi placeat praesentium ea sapiente! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas officiis minus perferendis, nesciunt quidem tempore?</div>
-                <button onclick="explorePopUpAbout ()" class="sectionOne__left--btn white-btn" id="about">Explore</button>
+                <button onclick="explorePopUpAbout ()" class="sectionOne__left--btn white-btn hvr-bounce-in" id="about">Explore</button>
             </div>
             <img src="src/images/Home/Chef-bro.svg" alt="" class="sectionOne__right responsive-image">
         </div>
@@ -48,13 +49,13 @@
             <div class="sectionTwo__content--title common-title">Lorem ipsum dolor sit amet consectetur.</div>
             <div class="sectionTwo__content--text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
         </div>
-        <div class="sectionTwo__logo ">
-            <img src="src/images/Companies/Google.svg" alt="" class="responsive-image">
-            <img src="src/images/Companies/Microsoft.svg" alt="" class="responsive-image" id="microsoft">
-            <img src="src/images/Companies/Facebook.svg" alt="" class="responsive-image" id="facebook">
-            <img src="src/images/Companies/ifood-43.svg" width="120px" alt="" class="responsive-image" id="ifood">
+        <div class="sectionTwo__logo">
+            <img src="src/images/Companies/Google.svg" alt="" class="responsive-image hvr-grow">
+            <img src="src/images/Companies/Microsoft.svg" alt="" class="responsive-image hvr-grow">
+            <img src="src/images/Companies/Facebook.svg" alt="" class="responsive-image hvr-grow">
+            <img src="src/images/Companies/ifood-43.svg" width="120px" alt="" class="responsive-image hvr-grow">
         </div>
-        <button onclick="explorePopUpPartners ()" class="sectionTwo__btn dark-btn">Learn more</button>
+        <button onclick="explorePopUpPartners ()" class="sectionTwo__btn dark-btn hvr-bounce-in">Learn more</button>
     </div>
      
     <div class="sectionThree container grid" id="sThree">
@@ -97,7 +98,11 @@
         <div class="sectionThree__right flex">
             <div class="sectionThree__right--title common-title">Salty Recipes</div>
             <div class="sectionThree__right--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum impedit, assumenda magni in exercitationem magnam consectetur temporibus facilis minus perferendis labore mollitia ad modi quaerat. Maiores eos, laborum excepturi laudantium nisi numquam totam aspernatur asperiores.</div>
-            <button onclick="explorePopUp ()" class="sectionThree__right--btn dark-btn">Explore</button>
+            <div class="button-group flex">
+                <button onclick="explorePopUp ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Explore</button>
+                <div class="mid-button-text">or</div>
+                <button onclick="explorePopUpSubmit ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Submit</button>
+            </div>
         </div>
     </div>
 
@@ -105,7 +110,11 @@
         <div class="sectionFour__left flex">
             <div class="sectionFour__left--title common-title">Sweety Recipes</div>
             <div class="sectionFour__left--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia porro rerum quidem facere, numquam laborum, impedit, recusandae dolorum doloremque non incidunt nam commodi reiciendis delectus enim? Nobis a cum labore! Blanditiis hic non quis iusto.</div>
-            <button onclick="explorePopUp ()" class="sectionFour__left--btn dark-btn">Explore</button>
+            <div class="button-group flex">
+                <button onclick="explorePopUp ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Explore</button>
+                <div class="mid-button-text">or</div>
+                <button onclick="explorePopUpSubmit ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Submit</button>
+            </div>
         </div>
                 <!--Slider-->
                 <div class="slider">
@@ -159,33 +168,33 @@
             </div>
             <div class="sectionFive__cards--2">
                 <img src="src/images/team/Cardtest.svg" alt="" class="responsive-image">
-                <div class="name">Laryssa Marquesin</div>
+                <div class="name">Leonardo Kuntz</div>
                 <div class="pos">chef</div>
             </div>
             <div class="sectionFive__cards--3">
                 <img src="src/images/team/Cardtest.svg" alt="" class="responsive-image">
-                <div class="name">Leonardo Kuntz</div>
+                <div class="name">Victor Borba</div>
                 <div class="pos">chef</div>
             </div>
             <div class="sectionFive__cards--4">
                 <img src="src/images/team/Cardtest.svg" alt="" class="responsive-image">
-                <div class="name">Tiago Machado</div>
+                <div class="name">You</div>
                 <div class="pos">chef</div>
             </div>
         </div>
-        <button onclick="explorePopUpTeams ()" class="sectionFive__btn dark-btn">View team</button>
+        <button onclick="explorePopUpTeams ()" class="sectionFive__btn dark-btn hvr-bounce-in">View team</button>
     </div>
 
     <div class="footerWrapper">
         <div class="footerLinks container">
             <div class="footerLinks__socials" id="socials">
-                <img src="src/images/socials/facebook.svg" alt="">
-                <img src="src/images/socials/instagram.svg" alt="">
-                <img src="src/images/socials/twitter.svg" alt="">
-                <img src="src/images/socials/tiktok.svg" alt="">
-                <img src="src/images/socials/youtube.svg" alt="">
+                <img src="src/images/socials/facebook.svg" class="hvr-grow" alt="">
+                <img src="src/images/socials/instagram.svg" class="hvr-grow" alt="">
+                <img src="src/images/socials/twitter.svg" class="hvr-grow" alt="">
+                <img src="src/images/socials/tiktok.svg" class="hvr-grow" alt="">
+                <img src="src/images/socials/youtube.svg" class="hvr-grow" alt="">
             </div>
-            <div class="footerLinks__copyright text-white text-center">Ⓒ Recipy, 2022. All rights reserved.</div>
+            <div class="footerLinks__copyright text-white text-center">Ⓒ Recipy, 2024. All rights reserved.</div>
         </div>
     </div>
 
@@ -196,46 +205,87 @@
                 <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
                 <div class="logo__text logo__text">Recipy</div>
             </div>
-            <div class="label text-green">Looking for a specific recipe?</div>
-            <form>
-                <input type="text" class="srch-bar input common-title" placeholder="Search...">
+        </div>
+    </div>
+
+    <div class="pop-up-container" id="popUpIdSignup">
+        <div class="pop-up-signup">
+            <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
+                <div class="logo__text logo__text hvr-grow">Recipy</div>
+            </div>
+            <form class="popUp__form" id="signUpForm">
+                <div class="label text-green" id="submitFormTitle">Sign Up</div>
+                <input type="text" name="username" placeholder="Username..." required>
+                <input type="email" name="email" placeholder="Email..." required>
+                <input type="password" name="password" placeholder="Password..." required>
+                <select class="select" id="experience" name="experience" required>
+                    <option value="" disabled selected>Experience level...</option>
+                    <option value="amateur">Amateur</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="professional">Professional</option>
+                </select>
+                <button class="sectionThree__right--btn dark-btn hvr-bounce-in" type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="pop-up-container" id="popUpIdSubmit">
+        <div class="pop-up-submit">
+            <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
+                <div class="logo__text logo__text hvr-grow">Recipy</div>
+            </div>
+            <form class="popUp__form" id="recipeForm">
+                <div class="label text-green" id="submitFormTitle">Submit Your Recipe</div>
+                <input type="text" id="title" name="title" placeholder="Title..." required><br><br>
+                <select class="select" id="recipeType" name="recipeType" required>
+                    <option value="" disabled selected>Type...</option>
+                    <option value="Sweety">Sweety</option>
+                    <option value="Salty">Salty</option>
+                </select>
+                <textarea id="ingredients" name="ingredients" placeholder="Ingredients..." required></textarea><br><br>
+                <textarea id="instructions" name="instructions" placeholder="Instructions" required></textarea><br><br>
+                <button class="sectionThree__right--btn dark-btn hvr-bounce-in" type="submit">Submit</button>
             </form>
         </div>
     </div>
 
     <div class="pop-up-container" id="popUpIdAbout">
         <div class="pop-up">
-            <button class="close common-title" id="cbtn">x</button>
+            <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
             <div class="logo-pop-up">
-                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
-                <div class="logo__text logo__text">Recipy</div>
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
+                <div class="logo__text logo__text hvr-grow">Recipy</div>
             </div>
             <div class="common-title-about text-center text-dark">About</div>
-            <div class="about-text text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate dolor, a hic et nostrum dignissimos velit dolore. Placeat atque voluptates sint magni reprehenderit! Deserunt quam dolorem qui sequi eos ut, corporis, perspiciatis eligendi laudantium quidem atque? Beatae quasi hic tempora aliquid eos voluptatibus, corporis alias debitis deserunt autem non harum laboriosam voluptatum! Doloribus nam voluptatem, repellat numquam ipsum veritatis aperiam, quia est repudiandae culpa alias architecto? Libero optio labore pariatur cum! Perferendis at reprehenderit atque obcaecati optio cupiditate voluptatem!</div>
+            <div class="about-text text-center text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque aspernatur sed molestiae accusantium nobis vel, eligendi incidunt voluptates animi rem, eaque omnis odit harum ex.</div>
         </div>
     </div>
 
     <div class="pop-up-container" id="popUpIdPartners">
         <div class="pop-up">
-            <button class="close common-title" id="cbtn">x</button>
+            <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
             <div class="logo-pop-up">
-                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
-                <div class="logo__text logo__text">Recipy</div>
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
+                <div class="logo__text logo__text hvr-grow">Recipy</div>
             </div>
             <div class="common-title-about text-center text-dark">Partners</div>
-            <div class="about-text text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate dolor, a hic et nostrum dignissimos velit dolore. Placeat atque voluptates sint magni reprehenderit! Deserunt quam dolorem qui sequi eos ut, corporis, perspiciatis eligendi laudantium quidem atque? Beatae quasi hic tempora aliquid eos voluptatibus, corporis alias debitis deserunt autem non harum laboriosam voluptatum! Doloribus nam voluptatem, repellat numquam ipsum veritatis aperiam, quia est repudiandae culpa alias architecto? Libero optio labore pariatur cum! Perferendis at reprehenderit atque obcaecati optio cupiditate voluptatem!</div>
+            <div class="about-text text-center text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt at, odio blanditiis, beatae et perferendis tenetur molestias, rem eius fuga mollitia veritatis deleniti inventore eos?</div>
         </div>
     </div>  
     
     <div class="pop-up-container" id="popUpIdTeams">
         <div class="pop-up">
-            <button class="close common-title" id="cbtn">x</button>
+            <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
             <div class="logo-pop-up">
-                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
-                <div class="logo__text logo__text">Recipy</div>
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
+                <div class="logo__text logo__text hvr-grow">Recipy</div>
             </div>
             <div class="common-title-about text-center text-dark">Team</div>
-            <div class="about-text text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate dolor, a hic et nostrum dignissimos velit dolore. Placeat atque voluptates sint magni reprehenderit! Deserunt quam dolorem qui sequi eos ut, corporis, perspiciatis eligendi laudantium quidem atque? Beatae quasi hic tempora aliquid eos voluptatibus, corporis alias debitis deserunt autem non harum laboriosam voluptatum! Doloribus nam voluptatem, repellat numquam ipsum veritatis aperiam, quia est repudiandae culpa alias architecto? Libero optio labore pariatur cum! Perferendis at reprehenderit atque obcaecati optio cupiditate voluptatem!</div>
+            <div class="about-text text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias labore unde at vitae voluptatem esse suscipit, fugiat animi repellendus sunt nesciunt cumque totam explicabo veritatis!</div>
         </div>
     </div>
 

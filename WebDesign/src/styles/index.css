@@ -26,11 +26,10 @@ html {
 
 .sectionTwo__logo {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .sectionTwo__logo img {
-    margin-left: 220px;
     justify-self: center;
     align-self: center;
 }
@@ -112,6 +111,18 @@ html {
 
 .sectionFive__btn {
     justify-self: center;
+}
+
+.popUp__form--text {
+    font-family: var(--font2);
+    font-size: var(--body);
+}
+
+.popUp__form {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1%;
 }
 
 @media (max-width: 1200px) {
