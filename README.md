@@ -1,7 +1,5 @@
 # recipy
-Web Design Project
-
-A culinary focused website project for the class of Web Design.
+A culinary focused website project.
 
 By: 
 Erick Miranda Viana - 211857  
