@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="src/images/Logo/LogoWhite.svg">
+    <link rel="icon" href="src/images/Logo/Hamburger-pana.svg">
     <title>Recipy</title>
     <link rel="stylesheet" href="src/styles/designSystem.css">
     <link rel="stylesheet" href="src/styles/index.css">
@@ -22,7 +22,10 @@
                 <a href="#sOne" class="navbar__menu--1 hvr-grow">Home</a>
                 <a href="#sThree" class="navbar__menu--2 hvr-grow">Salty</a>
                 <a href="#sFour" class="navbar__menu--3 hvr-grow">Sweet</a>
-                <a href="#" onclick="explorePopUpSignup()" class="navbar__menu--3 hvr-grow">Sign Up</a>
+                <a href="#" id="signUpLink" onclick="explorePopUpSignup()" class="navbar__menu--3 hvr-grow">Sign Up</a>
+                <a href="#" id="signInLink" onclick="explorePopUpSignin()" class="navbar__menu--3 hvr-grow">Sign In</a>
+                <a href="#" id="profileLink" onclick="explorePopUpProfile()" class="navbar__menu--3 hvr-grow hidden">Profile</a>
+                <a href="#" id="signOutLink" class="navbar__menu--3 hvr-grow hidden" onclick="signOut()">Sign Out</a>
                 <a href="mailto: recipy@example.com" class="navbar__menu--4 hvr-grow">Contact</a>
             </div>
 
@@ -205,6 +208,7 @@
                 <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
                 <div class="logo__text logo__text">Recipy</div>
             </div>
+            <div class="common-title-about text-center text-dark">Recipes</div>
         </div>
     </div>
 
@@ -228,6 +232,33 @@
                 </select>
                 <button class="sectionThree__right--btn dark-btn hvr-bounce-in" type="submit">Sign up</button>
             </form>
+        </div>
+    </div>
+
+    <div class="pop-up-container" id="popUpIdSignin">
+        <div class="pop-up-signup">
+            <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
+                <div class="logo__text logo__text hvr-grow">Recipy</div>
+            </div>
+            <form class="popUp__form" id="signInForm">
+                <div class="label text-green" id="submitFormTitle">Sign In</div>
+                <input type="email" name="email" placeholder="Email..." required>
+                <input type="password" name="password" placeholder="Password..." required>
+                <button class="sectionThree__right--btn dark-btn hvr-bounce-in" type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="pop-up-container" id="popUpIdProfile">
+        <div class="pop-up-signup">
+            <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
+                <div class="logo__text logo__text hvr-grow">Recipy</div>
+            </div>
+            <div class="common-title-about text-center text-dark">Profile</div>
         </div>
     </div>
 

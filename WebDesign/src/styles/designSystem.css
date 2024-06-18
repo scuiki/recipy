@@ -525,6 +525,13 @@
     margin-bottom: 15%;
  } 
 
+#signUpLink.hidden,
+#signInLink.hidden,
+#profileLink.hidden,
+#signOutLink.hidden {
+    display: none;
+}
+
 .common-title-about {
     text-transform: capitalize;
     font-size: 44px;

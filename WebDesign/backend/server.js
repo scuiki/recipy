@@ -1,15 +1,24 @@
 const express = require('express');
+const session = require('express-session');
+const bcrypt = require('bcrypt');
 const path = require('path');
 const app = express();
 const api = require('./routes/api');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
-
 const db = new sqlite3.Database('./database/database.db');
 
 // Middleware para fazer parsing do corpo da requisição
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Configurar middleware de sessão
+app.use(session({
+    secret: 'your-secret-key', // Substitua por uma chave secreta forte
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // Em produção, defina secure: true se estiver usando HTTPS
+}));
 
 // Servir arquivos estáticos
 app.use('/src', express.static(path.join(__dirname, '../src')));

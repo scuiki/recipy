@@ -1,6 +1,5 @@
 let openBtn = document.querySelector ('.bi-list');
 let closeBtn = document.querySelector ('.bi-x-lg');
-
 let menu = document.querySelector (".navbar__menu");
 
 let count = 1;
@@ -76,6 +75,26 @@ function explorePopUpSignup () {
     });
 }
 
+function explorePopUpSignin () {
+    const popUp = document.getElementById ("popUpIdSignin");
+    popUp.classList.add ("show");
+    popUp.addEventListener ("click", (e) => {
+        if (e.target.id == "popUpIdSignin" || e.target.id == "cbtn") {
+            popUp.classList.remove ("show");
+        }
+    });
+}
+
+function explorePopUpProfile () {
+    const popUp = document.getElementById ("popUpIdProfile");
+    popUp.classList.add ("show");
+    popUp.addEventListener ("click", (e) => {
+        if (e.target.id == "popUpIdProfile" || e.target.id == "cbtn") {
+            popUp.classList.remove ("show");
+        }
+    });
+}
+
 function explorePopUpSubmit () {
     const popUp = document.getElementById ("popUpIdSubmit");
     popUp.classList.add ("show");
@@ -138,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ title, type, ingredients, instructions }),
+        body: JSON.stringify({ title, recipe_type: type, ingredients, instructions }),
     })
     .then(response => response.json())
     .then(data => {
@@ -170,17 +189,90 @@ document.getElementById('signUpForm').addEventListener('submit', function(e) {
             'Content-Type': 'application/json'
         }
     })
+    .then(response => {
+        console.log('Response:', response); // Adiciona a depuração da resposta
+        if (!response.ok) {
+            // Se a resposta não for ok, lança um erro para ser capturado no bloco catch
+            throw new Error(`Network response was not ok: ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Data:', data); // Adiciona a depuração do JSON retornado
+        alert('Sign up successful!');
+        e.target.reset();
+        const popUp = document.getElementById('signUpPopUpId');
+        if (popUp) { // Verifica se o elemento existe
+            popUp.classList.remove('show');
+        } else {
+            console.warn('Elemento com ID signUpPopUpId não encontrado.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error); // Adiciona mais detalhes ao erro
+        alert('Error signing up');
+    });
+});
 
+document.getElementById('signInForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const popUp = document.getElementById ("popUpIdSignin");
+
+    fetch('/api/signin', {
+        method: 'POST',
+        body: JSON.stringify({
+            email: formData.get('email'),
+            password: formData.get('password')
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
     .then(response => response.json())
     .then(data => {
-        console.log('Success:', data);
-            alert('Sign up successful!');
-            e.target.reset();
-            const popUp = document.getElementById('signUpPopUpId');
-            popUp.classList.remove('show');
+        if (data.error) {
+            alert('Error signing in: ' + data.error);
+        } else {
+            alert('Sign in successful!');
+            console.log('User:', data.user);
+            localStorage.setItem('isLoggedIn', 'true');
+            checkLoginStatus();
+            popUp.classList.remove ("show");
+            // Redirecionar ou atualizar a interface conforme necessário
+        }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Error signing up');
+        alert('Error signing in');
     });
-})
+});
+
+function checkLoginStatus() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+    const signUpLink = document.getElementById('signUpLink');
+    const signInLink = document.getElementById('signInLink');
+    const profileLink = document.getElementById('profileLink');
+    const signOutLink = document.getElementById('signOutLink');
+
+    if (isLoggedIn) {
+        signUpLink.classList.add('hidden');
+        signInLink.classList.add('hidden');
+        profileLink.classList.remove('hidden');
+        signOutLink.classList.remove('hidden');
+    } else {
+        signUpLink.classList.remove('hidden');
+        signInLink.classList.remove('hidden');
+        profileLink.classList.add('hidden');
+        signOutLink.classList.add('hidden');
+    }
+}
+
+function signOut() {
+    localStorage.setItem('isLoggedIn', 'false');
+    checkLoginStatus();
+}
+
+
