@@ -130,6 +130,18 @@ html {
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
     }
+
+    .pop-up-signup {
+        width: 30%;
+        height: 34%;
+        max-width: 240px;
+    }
+
+    .pop-up-signin {
+        max-width: 270px;
+        width: 35%;
+        height: 28%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -144,6 +156,18 @@ html {
     .sectionFive__cards {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .pop-up-signup {
+        width: 45%;
+        height: 34%;
+        max-width: 240px;
+    }
+
+    .pop-up-signin {
+        max-width: 270px;
+        width: 45%;
+        height: 28%;
+    }
 }
 
 @media (max-width: 568px) {
@@ -154,5 +178,16 @@ html {
 
     .sectionFive__cards {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pop-up-signup {
+        width: 45%;
+        height: 34%;
+        max-width: 240px;
+    }
+
+    .pop-up-signin {
+        width: 47%;
+        height: 27%;
     }
 }

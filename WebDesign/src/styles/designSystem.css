@@ -198,9 +198,22 @@
     font-family: var(--font2);
 }
 
+#signInForm .dark-btn {
+    margin-top: 6%;
+}
+
 @media (max-width: 1200px) {
     .container {
         max-width: 970px;
+    }
+    .pop-up-signup {
+        width: 18%;
+        height: 35%;
+    }
+
+    .pop-up-signin {
+        width: 18%;
+        height: 27%;
     }
 }
 
@@ -225,16 +238,17 @@
     .navbar__menu {   
         background-color: var(--color-green-100);
         position: absolute;
-        top: 7vh;
+        top: 6.9vh;
         width: 100%;
         right: 0;
         height: 100vh;
-        
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 40px;
+        z-index: 1000;
+        opacity: 90%;
     }
 
     .navbar__menu--1 {
@@ -258,11 +272,29 @@
         align-items: center;
         gap: 20px;
     }
+
+    .pop-up-signup {
+        width: 28%;
+        height: 34.5%;
+    }
+    .pop-up-signin {
+        max-width: 400px;
+        width: 45%;
+        height: 28%;
+    }
 }
 
 @media (max-width: 568px) {
     .container {
         max-width: 90%;
+    }
+    .pop-up-signup {
+        width: 40%;
+        height: 34%;
+    }
+    .pop-up-signin {
+        width: 47%;
+        height: 27%;
     }
 }
 
@@ -395,7 +427,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 1000;
 }
 
 .pop-up-container {
@@ -424,9 +456,11 @@
 
 .pop-up-submit {
     z-index: 15;
+    max-width: 300px;
+    max-height: 435px;
     background: var(--color-white-100);
-    width: 17.5%;
-    height: 47%;
+    width: 100%;
+    height: 100%;
     border: 3px solid var(--color-green-25);
     border-radius: 10px;
     position: relative;
@@ -435,8 +469,34 @@
 .pop-up-signup {
     z-index: 15;
     background: var(--color-white-100);
-    width: 13%;
-    height: 31%;
+    width: 19%;
+    height: 34%;
+    max-width: 240px;
+    max-height: 280px;
+    border: 3px solid var(--color-green-25);
+    border-radius: 10px;
+    position: relative;
+}
+
+.pop-up-signin {
+    max-width: 270px;
+    max-height: 230px;
+    z-index: 15;
+    background: var(--color-white-100);
+    width: 22.5%;
+    height: 28%;
+    border: 3px solid var(--color-green-25);
+    border-radius: 10px;
+    position: relative;
+}
+
+.pop-up-profile {
+    max-width: 290px;
+    max-height: 290px;
+    z-index: 15;
+    background: var(--color-white-100);
+    width: 60%;
+    height: 50%;
     border: 3px solid var(--color-green-25);
     border-radius: 10px;
     position: relative;
@@ -510,6 +570,13 @@
     color: var(--color-green-100);
 }
 
+.profile-text {
+    padding: 4%;
+    font-family: var(--font2);
+    font-size: 18px;
+    color: var(--color-green-100);
+}
+
 ::placeholder {
     color: var(--color-dark-50);
     font-family: var(--font2);
@@ -530,6 +597,20 @@
 #profileLink.hidden,
 #signOutLink.hidden {
     display: none;
+}
+
+li {
+    list-style-type:none;
+    cursor: pointer;
+    max-width: 100px;
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;
+    text-align: 0;
+}
+
+.list {
+    display: flex;
 }
 
 .common-title-about {
@@ -558,7 +639,19 @@
     transition-property: transform;
 }
 
+.hvr-grow-list {
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+
 .hvr-grow:hover,
+.hvr-grow-list:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);

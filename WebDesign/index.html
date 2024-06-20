@@ -102,7 +102,7 @@
             <div class="sectionThree__right--title common-title">Salty Recipes</div>
             <div class="sectionThree__right--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum impedit, assumenda magni in exercitationem magnam consectetur temporibus facilis minus perferendis labore mollitia ad modi quaerat. Maiores eos, laborum excepturi laudantium nisi numquam totam aspernatur asperiores.</div>
             <div class="button-group flex">
-                <button onclick="explorePopUp ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Explore</button>
+                <button onclick="explorePopUpSalty ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Explore</button>
                 <div class="mid-button-text">or</div>
                 <button onclick="explorePopUpSubmit ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Submit</button>
             </div>
@@ -114,7 +114,7 @@
             <div class="sectionFour__left--title common-title">Sweety Recipes</div>
             <div class="sectionFour__left--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia porro rerum quidem facere, numquam laborum, impedit, recusandae dolorum doloremque non incidunt nam commodi reiciendis delectus enim? Nobis a cum labore! Blanditiis hic non quis iusto.</div>
             <div class="button-group flex">
-                <button onclick="explorePopUp ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Explore</button>
+                <button onclick="explorePopUpSweety ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Explore</button>
                 <div class="mid-button-text">or</div>
                 <button onclick="explorePopUpSubmit ()" class="sectionThree__right--btn dark-btn hvr-bounce-in">Submit</button>
             </div>
@@ -212,6 +212,30 @@
         </div>
     </div>
 
+    <div class="pop-up-container" id="popUpIdSalty">
+        <div class="pop-up">
+            <button class="close common-title" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
+                <div class="logo__text logo__text">Recipy</div>
+            </div>
+            <div class="common-title-about text-center text-dark">Salty Recipes</div>
+            <div class="about-text text-center text-dark" id="saltyRecipeList"></div> <!-- Container para as receitas -->
+        </div>
+    </div>
+
+    <div class="pop-up-container" id="popUpIdSweety">
+        <div class="pop-up">
+            <button class="close common-title" id="cbtn">x</button>
+            <div class="logo-pop-up">
+                <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image">
+                <div class="logo__text logo__text">Recipy</div>
+            </div>
+            <div class="common-title-about text-center text-dark">Sweety Recipes</div>
+            <div class="about-text text-center text-dark" id="sweetyRecipeList"></div> <!-- Container para as receitas -->
+        </div>
+    </div>
+
     <div class="pop-up-container" id="popUpIdSignup">
         <div class="pop-up-signup">
             <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
@@ -236,7 +260,7 @@
     </div>
 
     <div class="pop-up-container" id="popUpIdSignin">
-        <div class="pop-up-signup">
+        <div class="pop-up-signin">
             <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
             <div class="logo-pop-up">
                 <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
@@ -252,13 +276,19 @@
     </div>
 
     <div class="pop-up-container" id="popUpIdProfile">
-        <div class="pop-up-signup">
+        <div class="pop-up pop-up-profile">
             <button class="close common-title hvr-bounce-in" id="cbtn">x</button>
             <div class="logo-pop-up">
                 <img src="src/images/Logo/Hamburger-pana (1).svg" width="96px" alt="" class="navbar__logo--image hvr-grow">
                 <div class="logo__text logo__text hvr-grow">Recipy</div>
             </div>
             <div class="common-title-about text-center text-dark">Profile</div>
+            <div id="profilePopup" class="popup">
+                <div class="profile-text text-dark" id="profileUsername">Username: </div>
+                <div class="profile-text text-dark" id="profileEmail">Email: </div>
+                <div class="profile-text text-dark" id="profileExperience">Experience: </div>
+            </div>
+        </div>
         </div>
     </div>
 

@@ -41,26 +41,60 @@ closeBtn.addEventListener ("click", ()=>{
     nav.classList.remove ("top");
     openBtn.classList.toggle ("hide");
     closeBtn.classList.toggle ("hide");
-    menu.classList.toggle ("hidden");   
+    menu.classList.toggle ("hidden"); 
 })
 
 var nav = document.getElementById("nav");
 var menu_ = document.getElementById("menu_");
 
-window.onscroll = function () {
-    if (window.pageYOffset >= menu.offsetTop) {
-        nav.classList.add ("sticky");
-    }   else {
-        nav.classList.remove ("sticky");
+// Propriedade sticky navbar
+window.onscroll = handleScroll;
+window.addEventListener('resize', handleScroll);
+window.addEventListener('orientationchange', handleScroll);
+
+function handleScroll() {
+    const nav = document.getElementById("nav");
+    const stickyThreshold = 160;
+
+    if (window.scrollY >= stickyThreshold) {
+        nav.classList.add("sticky");
+    } else {
+        nav.classList.remove("sticky");
     }
 }
 
 function explorePopUp () {
     const popUp = document.getElementById ("popUpId");
     popUp.classList.add ("show");
+    disableScroll();
     popUp.addEventListener ("click", (e) => {
         if (e.target.id == "popUpId" || e.target.id == "cbtn") {
             popUp.classList.remove ("show");
+            enableScroll();
+        }
+    });
+}
+
+function explorePopUpSalty () {
+    const popUp = document.getElementById ("popUpIdSalty");
+    popUp.classList.add ("show");
+    disableScroll();
+    popUp.addEventListener ("click", (e) => {
+        if (e.target.id == "popUpIdSalty" || e.target.id == "cbtn") {
+            popUp.classList.remove ("show");
+            enableScroll();
+        }
+    });
+}
+
+function explorePopUpSweety () {
+    const popUp = document.getElementById ("popUpIdSweety");
+    popUp.classList.add ("show");
+    disableScroll();
+    popUp.addEventListener ("click", (e) => {
+        if (e.target.id == "popUpIdSweety" || e.target.id == "cbtn") {
+            popUp.classList.remove ("show");
+            enableScroll();
         }
     });
 }
@@ -68,9 +102,11 @@ function explorePopUp () {
 function explorePopUpSignup () {
     const popUp = document.getElementById ("popUpIdSignup");
     popUp.classList.add ("show");
+    disableScroll();
     popUp.addEventListener ("click", (e) => {
         if (e.target.id == "popUpIdSignup" || e.target.id == "cbtn") {
             popUp.classList.remove ("show");
+            enableScroll();
         }
     });
 }
@@ -78,9 +114,11 @@ function explorePopUpSignup () {
 function explorePopUpSignin () {
     const popUp = document.getElementById ("popUpIdSignin");
     popUp.classList.add ("show");
+    disableScroll();
     popUp.addEventListener ("click", (e) => {
         if (e.target.id == "popUpIdSignin" || e.target.id == "cbtn") {
             popUp.classList.remove ("show");
+            enableScroll();
         }
     });
 }
@@ -88,9 +126,11 @@ function explorePopUpSignin () {
 function explorePopUpProfile () {
     const popUp = document.getElementById ("popUpIdProfile");
     popUp.classList.add ("show");
+    disableScroll();
     popUp.addEventListener ("click", (e) => {
         if (e.target.id == "popUpIdProfile" || e.target.id == "cbtn") {
             popUp.classList.remove ("show");
+            enableScroll();
         }
     });
 }
@@ -98,9 +138,11 @@ function explorePopUpProfile () {
 function explorePopUpSubmit () {
     const popUp = document.getElementById ("popUpIdSubmit");
     popUp.classList.add ("show");
+    disableScroll();
     popUp.addEventListener ("click", (e) => {
         if (e.target.id == "popUpIdSubmit" || e.target.id == "cbtn") {
             popUp.classList.remove ("show");
+            enableScroll();
         }
     });
 }
@@ -108,9 +150,11 @@ function explorePopUpSubmit () {
 function explorePopUpAbout () {
     const popUp = document.getElementById ("popUpIdAbout");
     popUp.classList.add ("show");
+    disableScroll();
     popUp.addEventListener ("click", (e) => {
         if (e.target.id == "popUpIdAbout" || e.target.id == "cbtn") {
             popUp.classList.remove ("show");
+            enableScroll();
         }
     });
 }
@@ -118,9 +162,11 @@ function explorePopUpAbout () {
 function explorePopUpPartners () {
     const popUp = document.getElementById ("popUpIdPartners");
     popUp.classList.add ("show");
+    disableScroll();
     popUp.addEventListener ("click", (e) => {
         if (e.target.id == "popUpIdPartners" || e.target.id == "cbtn") {
             popUp.classList.remove ("show");
+            enableScroll();
         }
     });
 }
@@ -128,9 +174,11 @@ function explorePopUpPartners () {
 function explorePopUpTeams () {
     const popUp = document.getElementById ("popUpIdTeams");
     popUp.classList.add ("show");
+    disableScroll();
     popUp.addEventListener ("click", (e) => {
         if (e.target.id == "popUpIdTeams" || e.target.id == "cbtn") {
             popUp.classList.remove ("show");
+            enableScroll();
         }
     });
 }
@@ -238,6 +286,7 @@ document.getElementById('signInForm').addEventListener('submit', function(e) {
             alert('Sign in successful!');
             console.log('User:', data.user);
             localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('user', JSON.stringify(data.user)); // Armazena os dados do usuário localmente
             checkLoginStatus();
             popUp.classList.remove ("show");
             // Redirecionar ou atualizar a interface conforme necessário
@@ -272,7 +321,55 @@ function checkLoginStatus() {
 
 function signOut() {
     localStorage.setItem('isLoggedIn', 'false');
+    localStorage.removeItem('user'); // Remove os dados do usuário
     checkLoginStatus();
 }
 
+document.getElementById('profileLink').addEventListener('click', function() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+        document.getElementById('profileUsername').textContent = `Username: ${user.username}`;
+        document.getElementById('profileEmail').textContent = `Email: ${user.email}`;
+        document.getElementById('profileExperience').textContent = `Experience: ${user.experience}`;
+        document.getElementById('profilePopup').style.display = 'block';
+    }
+});
 
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+    document.body.style.overflow = '';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadRecipesByType("Sweety", "sweetyRecipeList");
+    loadRecipesByType("Salty", "saltyRecipeList");
+});
+
+function loadRecipesByType(type, popUpId) {
+    fetch(`/api/recipes/type/${type}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const popUpContainer = document.getElementById(popUpId);
+            const recipeList = document.createElement("ul");
+
+            data.recipes.forEach(recipe => {
+                const listItem = document.createElement("li");
+                listItem.textContent = recipe.title;
+                listItem.classList.add("hvr-grow-list");
+                recipeList.appendChild(listItem);
+            });
+
+            popUpContainer.appendChild(recipeList);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}

@@ -16,6 +16,17 @@ router.get('/recipes', (req, res) => {
     });
 });
 
+router.get('/recipes/type/:type', (req, res) => {
+    const recipeType = req.params.type;
+    db.all('SELECT * FROM recipes WHERE recipe_type = ?', [recipeType], (err, rows) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        res.json({ recipes: rows });
+    });
+});
+
 router.post('/recipes', (req, res) => {
     const { title, ingredients, instructions, recipe_type } = req.body;
     if (!title || !ingredients || !instructions || !recipe_type) {
@@ -90,7 +101,13 @@ router.post('/signin', (req, res) => {
                 experience: user.experience
             };
 
-            res.json({ message: 'Sign in successful', user: req.session.user });
+            res.json({ message: 'Sign in successful', user: req.session.user, 
+                user: {
+                id: user.id,
+                username: user.username,
+                email: user.email,
+                experience: user.experience
+            }});
         });
     });
 });
